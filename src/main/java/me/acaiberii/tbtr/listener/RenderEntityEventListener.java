@@ -12,7 +12,7 @@ public class RenderEntityEventListener {
         if (GetCollision.getIsCollidingX(event.getEntity()) && GetCollision.getIsCollidingY(event.getEntity()) && GetCollision.getIsCollidingZ(event.getEntity())) {
             event.cancel();
         }
-        else if (isFarX(event.getEntity()) || isFarY(event.getEntity()) || isFarZ(event.getEntity())) {
+        else if (isFarX(event.getEntity(), 200) || isFarY(event.getEntity(), 200) || isFarZ(event.getEntity(), 200)) {
             event.cancel();
         }
     }

@@ -6,8 +6,8 @@ import net.minecraft.entity.Entity;
 import static me.acaiberii.tbtr.util.player.GetPos.*;
 
 public class GetFar {
-    public static boolean isFarX(Entity entity) {
-        if (Math.rint(entity.posX - getPosX()) > 100) {
+    public static boolean isFarX(Entity entity, double pos) {
+        if (Math.rint(entity.posX - getPosX()) > pos) {
             return true;
         }
         else {
@@ -15,8 +15,8 @@ public class GetFar {
         }
     }
 
-    public static boolean isFarY(Entity entity) {
-        if (Math.rint(entity.posY - getPosY()) > 100) {
+    public static boolean isFarY(Entity entity, double pos) {
+        if (Math.rint(entity.posY - getPosY()) > pos) {
             return true;
         }
         else {
@@ -24,8 +24,8 @@ public class GetFar {
         }
     }
 
-    public static boolean isFarZ(Entity entity) {
-        if (Math.rint(entity.posX - getPosZ()) > 100) {
+    public static boolean isFarZ(Entity entity, double pos) {
+        if (Math.rint(entity.posX - getPosZ()) > pos) {
             return true;
         }
         else {
