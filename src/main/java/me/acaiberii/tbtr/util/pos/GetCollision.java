@@ -1,4 +1,4 @@
-package me.acaiberii.tbtr.util;
+package me.acaiberii.tbtr.util.pos;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
