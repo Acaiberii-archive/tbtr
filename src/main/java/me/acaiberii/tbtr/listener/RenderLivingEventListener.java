@@ -6,6 +6,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class RenderLivingEventListener {
     @SubscribeEvent
     public void onLivingEvent(RenderLivingEvent event) {
-
+        
     }
 }

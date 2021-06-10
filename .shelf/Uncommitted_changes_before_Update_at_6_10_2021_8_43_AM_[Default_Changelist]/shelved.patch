@@ -1,0 +1,18 @@
+Index: src/main/java/me/acaiberii/tbtr/listener/RenderLivingEventListener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package me.acaiberii.tbtr.listener;\r\n\r\nimport net.minecraftforge.client.event.RenderLivingEvent;\r\nimport net.minecraftforge.fml.common.eventhandler.SubscribeEvent;\r\n\r\npublic class RenderLivingEventListener {\r\n    @SubscribeEvent\r\n    public void onLivingEvent(RenderLivingEvent event) {\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/me/acaiberii/tbtr/listener/RenderLivingEventListener.java b/src/main/java/me/acaiberii/tbtr/listener/RenderLivingEventListener.java
+--- a/src/main/java/me/acaiberii/tbtr/listener/RenderLivingEventListener.java	(revision 1cfe67756be3012adfa99a43521d1c2c60e0f118)
++++ b/src/main/java/me/acaiberii/tbtr/listener/RenderLivingEventListener.java	(date 1623329017553)
+@@ -6,6 +6,6 @@
+ public class RenderLivingEventListener {
+     @SubscribeEvent
+     public void onLivingEvent(RenderLivingEvent event) {
+-
++        
+     }
+ }
