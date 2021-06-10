@@ -4,6 +4,5 @@
 "package": "me.acaiberii.tbtr.mixin.mixins",
 "refmap": "mixins.tbtr.refmap.json",
 "mixins": [
-    "MixinRenderManager"
   ]
 }
