@@ -13,7 +13,7 @@ public class RenderEntityEvent extends Event {
 
     private final Entity entity;
 
-    public RenderEntityEvent(Entity entityIn, ICamera camera, double camX, double camY, double camZ) {
+    public RenderEntityEvent(Entity entityIn) {
         this.entity = entityIn;
     }
 }

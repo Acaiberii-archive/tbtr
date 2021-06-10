@@ -1,7 +1,7 @@
 package me.acaiberii.tbtr.event;
 
 import me.acaiberii.tbtr.wrapper.Wrapper;
-import me.zero.alpine.type.Cancellable;
+import me.zero.alpine.event.type.Cancellable;
 
 public class Event extends Cancellable {
     private Era era = Era.PRE;

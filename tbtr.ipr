@@ -323,13 +323,13 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.0.0/865837a198189aee737019561ece842827f24278/java-objc-bridge-1.0.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.github.ZeroMemes:Alpine:1.5">
+    <library name="Gradle: com.github.ZeroMemes:Alpine:1.9">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ZeroMemes/Alpine/1.5/47a75558452a517824d4e5c96938622a0ffa30e2/Alpine-1.5.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ZeroMemes/Alpine/1.9/8190b5b16f126b45dc0081297e5be948169ef1dc/Alpine-1.9.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ZeroMemes/Alpine/1.5/9d70c69cfc1fb42b83e502b36ebe0998afd539d4/Alpine-1.5-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ZeroMemes/Alpine/1.9/b8dde48bf2b860dedaf336891b14fbd14b267e85/Alpine-1.9-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.google.code.findbugs:jsr305:3.0.1">
