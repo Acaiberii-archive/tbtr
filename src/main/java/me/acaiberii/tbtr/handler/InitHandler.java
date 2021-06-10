@@ -1,5 +1,6 @@
 package me.acaiberii.tbtr.handler;
 
+import me.acaiberii.tbtr.Main;
 import me.acaiberii.tbtr.listener.Listeners;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -15,7 +16,7 @@ public class InitHandler {
         Listeners listeners = new Listeners();
         EVENT_BUS.subscribe(listeners);
         LOGGER.log(Level.DEBUG, "Registered event system (ALPINE)");
-        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(Main.getInstance());
         LOGGER.log(Level.DEBUG, "Registered event system (FORGE)");
     }
 }
