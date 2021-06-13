@@ -1,8 +1,8 @@
 # toobadtorecord
-### a lot of this is skidded from postman because i have nobody to learn mixins from :)
+### a lot of this is skidded from postman, gavhack/gamesense because i have nobody to learn mixins from :)
 #### things:
 - [x] Cape rendering system
 - [x] GUI mixins
 - [x] Title optimization
-#### name:
-TooBadToRecord refers to the crappy quality of my videos when recorded by OBS. I have only 8 GB of RAM and an i7 CPU, not the best performance when running OBS and Minecraft at the same time.
+#### badges:
+[![Github All Releases](https://img.shields.io/github/downloads/AcaiBerii/tbtr/total.svg)]()
