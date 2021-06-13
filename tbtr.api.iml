@@ -27,6 +27,7 @@
     <orderEntry type="library" name="Gradle: com.github.ZeroMemes:Alpine:1.9" level="project" />
     <orderEntry type="library" name="Gradle: net.jodah:typetools:0.5.0" level="project" />
     <orderEntry type="library" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.json:json:20190722" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: net.minecraftforge:forgeSrc:1.12.2-14.23.5.2768-PROJECT(tbtr)" level="project" />

@@ -29,7 +29,7 @@ public class Main {
         return instance;
     }
 
-    @Mod.EventHandler
+    @SubscribeEvent
     public void onInit(FMLInitializationEvent event) {
         Listeners listeners = new Listeners();
         EVENT_BUS.subscribe(listeners);
