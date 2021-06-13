@@ -5,4 +5,4 @@
 - [x] GUI mixins
 - [x] Title optimization
 #### badges:
-[![Github All Releases](https://img.shields.io/github/downloads/AcaiBerii/tbtr/total.svg)]()
+[![Github All Releases](https://img.shields.io/github/downloads/AcaiBerii/tbtr/total.svg?style=social)]()
