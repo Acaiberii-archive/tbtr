@@ -25,7 +25,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Gradle: org.spongepowered:mixin:0.7.4-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: org.spongepowered:mixin:0.8-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: com.github.ZeroMemes:Alpine:1.9" level="project" />
     <orderEntry type="library" name="Gradle: net.jodah:typetools:0.5.0" level="project" />
     <orderEntry type="library" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />

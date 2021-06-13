@@ -12,7 +12,7 @@ buildscript {
 	}
 	dependencies {
 		classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-		classpath 'org.spongepowered:mixingradle:0.4-SNAPSHOT'
+		classpath 'org.spongepowered:mixingradle:0.6-SNAPSHOT'
 		classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
 	}
 }
@@ -65,7 +65,7 @@ repositories {
 }
 
 dependencies {
-	compile("org.spongepowered:mixin:0.7.4-SNAPSHOT") {
+	compile("org.spongepowered:mixin:0.8-SNAPSHOT") {
 		exclude module: 'launchwrapper'
 		exclude module: 'guava'
 		exclude module: 'gson'
@@ -74,6 +74,7 @@ dependencies {
 	compile "com.github.ZeroMemes:Alpine:1.9"
 	compile group: 'net.jodah', name: 'typetools', version: '0.5.0'
 	compile group: "com.googlecode.json-simple", name: "json-simple", version: "1.1.1"
+	compile group: 'org.json', name: 'json', version: '20190722'
 }
 
 processResources {

@@ -14,7 +14,6 @@ public class MixinLoader implements IFMLLoadingPlugin {
     public MixinLoader() {
         MixinBootstrap.init();
         Mixins.addConfiguration("mixins.tbtr.json");
-        LOGGER.log(Level.DEBUG, "Loading mixins (SPONGE)");
     }
 
     @Override

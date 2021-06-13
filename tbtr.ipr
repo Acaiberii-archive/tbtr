@@ -960,15 +960,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.11.1/d4c5628e197a0d6af8e9b93a9be32190c547bc8a/scala-reflect-2.11.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: org.spongepowered:mixin:0.7.4-SNAPSHOT">
+    <library name="Gradle: org.spongepowered:mixin:0.8-SNAPSHOT">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.4-SNAPSHOT/d22c5b223b3ff950cd165446dbc88afb162a8b6e/mixin-0.7.4-SNAPSHOT.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8-SNAPSHOT/6e1a62eb65e142213e591aef616646e44d212377/mixin-0.8-SNAPSHOT.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.4-SNAPSHOT/efa78ac2eaf054c2e4e8e4b9ad7b8606f4330f1b/mixin-0.7.4-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8-SNAPSHOT/782bf65fbe329458b6f3c3175630f3524900ed67/mixin-0.8-SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.4-SNAPSHOT/beb51f8d397aa89e7e031edeede106246f900853/mixin-0.7.4-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8-SNAPSHOT/f7a97ecc41c45d8a27b841360d239960f662ecd4/mixin-0.8-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: oshi-project:oshi-core:1.1">
