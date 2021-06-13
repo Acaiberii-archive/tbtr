@@ -19,6 +19,6 @@ public class MixinRenderManager {
         if (entityIn.isInWeb) callback.setReturnValue(false);
         else if (entityIn.isOutsideBorder) callback.setReturnValue(false);
         else if (entityIn.isDead) callback.setReturnValue(false);
-        else if (entityIn.posX == mc.mc.player.posX && entityIn.posZ == mc.mc.player.posZ && entityIn.posY == mc.mc.player.posY) callback.setReturnValue(false);
+        else if (entityIn.posX == mc.mc.player.posX && entityIn.posZ == mc.mc.player.posZ && entityIn.posY == mc.mc.player.posY && !entityIn.equals(mc.mc.player)) callback.setReturnValue(false);
     }
 }
