@@ -16,11 +16,9 @@ public class MixinRenderManager {
     @Inject(method = "shouldRender", at = @At("HEAD"), cancellable = true)
     public void onRender(Entity entityIn, ICamera camera, double camX, double camY, double camZ, final CallbackInfoReturnable<Boolean> callback)
     {
-        if (!entityIn.getUniqueID().equals(mc.mc.player.getUniqueID())) {
-            if (entityIn.isInWeb) callback.setReturnValue(false);
-            else if (entityIn.isOutsideBorder) callback.setReturnValue(false);
-            else if (entityIn.isDead) callback.setReturnValue(false);
-            else if (entityIn.posX == mc.mc.player.posX && entityIn.posZ == mc.mc.player.posZ && entityIn.posY == mc.mc.player.posY) callback.setReturnValue(false);
-        }
+        if (entityIn.isInWeb) callback.setReturnValue(false);
+        else if (entityIn.isOutsideBorder) callback.setReturnValue(false);
+        else if (entityIn.isDead) callback.setReturnValue(false);
+        else if (entityIn.posX == mc.mc.player.posX && entityIn.posZ == mc.mc.player.posZ && entityIn.posY == mc.mc.player.posY) callback.setReturnValue(false);
     }
 }
