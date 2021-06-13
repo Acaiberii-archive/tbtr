@@ -21,18 +21,18 @@ public class CapeUtil {
     private HashSet<UUID> inkUuids = new HashSet<>();
 
     public CapeUtil() {
-        getCapes();
+        getRegCapes();
+        getInkCapes();
     }
 
-    private void getCapes() {
+    private void getRegCapes() {
         try {
             URL regGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/reg-uuids");
-            URL inkineGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/inkine-uuids");
+
             BufferedReader regReader = null;
-            BufferedReader inkineReader = null;
             try {
                 regReader = new BufferedReader(new InputStreamReader(regGithubFile.openStream()));
-                inkineReader = new BufferedReader(new InputStreamReader(inkineGithubFile.openStream()));
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -41,12 +41,29 @@ public class CapeUtil {
             while ((regLine = regReader.readLine()) != null) {
                 regUuids.add(UUID.fromString(regLine));
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getInkCapes() {
+        try {
+            URL inkineGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/inkine-uuids");
+
+            BufferedReader inkineReader = null;
+            try {
+                inkineReader = new BufferedReader(new InputStreamReader(inkineGithubFile.openStream()));
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
 
             String inkineLine;
             while ((inkineLine = inkineReader.readLine()) != null) {
                 inkUuids.add(UUID.fromString(inkineLine));
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
