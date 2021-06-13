@@ -17,7 +17,8 @@ This is from Gav06's GavHack, taken from Gamesense. :)
 */
 
 public class CapeUtil {
-    private HashSet<UUID> uuids = new HashSet<>();
+    private HashSet<UUID> regUuids = new HashSet<>();
+    private HashSet<UUID> inkUuids = new HashSet<>();
 
     public CapeUtil() {
         getCapes();
@@ -25,25 +26,35 @@ public class CapeUtil {
 
     private void getCapes() {
         try {
-            URL githubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/uuids");
-            BufferedReader reader = null;
+            URL regGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/reg-uuids");
+            URL inkineGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/inkine-uuids");
+            BufferedReader regReader = null;
+            BufferedReader inkineReader = null;
             try {
-                reader = new BufferedReader(new InputStreamReader(githubFile.openStream()));
+                regReader = new BufferedReader(new InputStreamReader(regGithubFile.openStream()));
+                inkineReader = new BufferedReader(new InputStreamReader(inkineGithubFile.openStream()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            String line;
-            while ((line = reader.readLine()) != null) {
-                uuids.add(UUID.fromString(line));
+            String regLine;
+            while ((regLine = regReader.readLine()) != null) {
+                regUuids.add(UUID.fromString(regLine));
             }
 
+            String inkineLine;
+            while ((inkineLine = inkineReader.readLine()) != null) {
+                inkUuids.add(UUID.fromString(inkineLine));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public boolean hasCape(UUID uuid) {
-        return uuids.contains(uuid);
+    public boolean hasRegCape(UUID uuid) {
+        return regUuids.contains(uuid);
+    }
+    public boolean hasInkCape(UUID uuid) {
+        return inkUuids.contains(uuid);
     }
 }

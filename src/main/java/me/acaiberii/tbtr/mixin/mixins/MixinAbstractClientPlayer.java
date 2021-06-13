@@ -23,8 +23,11 @@ public abstract class MixinAbstractClientPlayer {
 
     @Inject(method = "getLocationCape", at = @At("HEAD"), cancellable = true)
     private void getCapeHook(CallbackInfoReturnable<ResourceLocation> cir) {
-        if (new CapeUtil().hasCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(new ResourceLocation("tbtr:cape.png"));
+        if (new CapeUtil().hasRegCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+            cir.setReturnValue(new ResourceLocation("tbtr:regCape.png"));
+        }
+        else if (new CapeUtil().hasInkCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+            cir.setReturnValue(new ResourceLocation("tbtr:inkCape.png"));
         }
     }
 }
