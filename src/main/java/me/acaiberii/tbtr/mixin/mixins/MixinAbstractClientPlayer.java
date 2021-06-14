@@ -34,5 +34,8 @@ public abstract class MixinAbstractClientPlayer {
         else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasStellaCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
             cir.setReturnValue(Resources.stellaCape);
         }
+        else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasAcaiCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+            cir.setReturnValue(Resources.acaiCape);
+        }
     }
 }

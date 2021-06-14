@@ -6,4 +6,5 @@ public class Resources {
     public static ResourceLocation regCape = new ResourceLocation("tbtr:regcape.png");
     public static ResourceLocation brokCape = new ResourceLocation("tbtr:brokcape.png");
     public static ResourceLocation stellaCape = new ResourceLocation("tbtr:stellacape.png");
+    public static ResourceLocation acaiCape = new ResourceLocation("tbtr:acaicape.png");
 }

@@ -20,10 +20,12 @@ public class CapeUtil {
     private HashSet<UUID> regUuids = new HashSet<>();
     private HashSet<UUID> brokUuids = new HashSet<>();
     private HashSet<UUID> stellaUuids = new HashSet<>();
+    private HashSet<UUID> acaiUuids = new HashSet<>();
 
     public CapeUtil() {
         getRegCapes();
         getBrokCapes();
+        getAcaiCapes();
     }
 
     private void getRegCapes() {
@@ -79,9 +81,30 @@ public class CapeUtil {
                 e.printStackTrace();
             }
 
-            String brokLine;
-            while ((brokLine = stellaReader.readLine()) != null) {
-                stellaUuids.add(UUID.fromString(brokLine));
+            String stellaLine;
+            while ((stellaLine = stellaReader.readLine()) != null) {
+                stellaUuids.add(UUID.fromString(stellaLine));
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getAcaiCapes() {
+        try {
+            URL acaiGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/stella-uuids");
+
+            BufferedReader acaiReader = null;
+            try {
+                acaiReader = new BufferedReader(new InputStreamReader(acaiGithubFile.openStream()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            String acaiLine;
+            while ((acaiLine = acaiReader.readLine()) != null) {
+                acaiUuids.add(UUID.fromString(acaiLine));
             }
         }
         catch (Exception e) {
@@ -99,5 +122,9 @@ public class CapeUtil {
 
     public boolean hasStellaCape(UUID uuid) {
         return stellaUuids.contains(uuid);
+    }
+
+    public boolean hasAcaiCape(UUID uuid) {
+        return acaiUuids.contains(uuid);
     }
 }
