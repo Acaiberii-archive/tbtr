@@ -18,11 +18,9 @@ This is from Gav06's GavHack, taken from Gamesense. :)
 
 public class CapeUtil {
     private HashSet<UUID> regUuids = new HashSet<>();
-    private HashSet<UUID> inkUuids = new HashSet<>();
 
     public CapeUtil() {
         getRegCapes();
-        getInkCapes();
     }
 
     private void getRegCapes() {
@@ -46,32 +44,7 @@ public class CapeUtil {
         }
     }
 
-    private void getInkCapes() {
-        try {
-            URL inkineGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/inkine-uuids");
-
-            BufferedReader inkineReader = null;
-            try {
-                inkineReader = new BufferedReader(new InputStreamReader(inkineGithubFile.openStream()));
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            String inkineLine;
-            while ((inkineLine = inkineReader.readLine()) != null) {
-                inkUuids.add(UUID.fromString(inkineLine));
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public boolean hasRegCape(UUID uuid) {
         return regUuids.contains(uuid);
-    }
-    public boolean hasInkCape(UUID uuid) {
-        return inkUuids.contains(uuid);
     }
 }
