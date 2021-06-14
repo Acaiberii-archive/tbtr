@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(World.class)
-public class MixinWorld extends Wrapper {
+public class MixinWorld {
     @Inject(method = "getRainStrength", at = @At("HEAD"), cancellable = true)
     public void getRainStrength(float delta, CallbackInfoReturnable<Float> callback) {
         callback.cancel();

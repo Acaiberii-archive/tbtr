@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 
 @Mixin(AbstractClientPlayer.class)
-public abstract class MixinAbstractClientPlayer extends Wrapper {
+public abstract class MixinAbstractClientPlayer {
 
     @Shadow
     @Nullable
