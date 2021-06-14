@@ -28,5 +28,11 @@ public abstract class MixinAbstractClientPlayer {
         if (me.acaiberii.tbtr.util.init.init.capeUtil.hasRegCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
             cir.setReturnValue(Resources.regCape);
         }
+        else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasBrokCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+            cir.setReturnValue(Resources.brokCape);
+        }
+        else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasStellaCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+            cir.setReturnValue(Resources.stellaCape);
+        }
     }
 }
