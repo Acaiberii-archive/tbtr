@@ -1,6 +1,5 @@
 package me.acaiberii.tbtr.mixin.mixins;
 
-import me.acaiberii.tbtr.Main;
 import me.acaiberii.tbtr.wrapper.Wrapper;
 import net.minecraft.client.renderer.culling.ICamera;
 import net.minecraft.client.renderer.entity.RenderManager;
