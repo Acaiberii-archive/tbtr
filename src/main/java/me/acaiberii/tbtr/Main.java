@@ -28,7 +28,7 @@ public class Main {
         return instance;
     }
 
-    @SubscribeEvent
+    @Mod.EventHandler
     public void onInit(FMLInitializationEvent event) {
 
     }

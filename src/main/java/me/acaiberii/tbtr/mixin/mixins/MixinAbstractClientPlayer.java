@@ -1,5 +1,6 @@
 package me.acaiberii.tbtr.mixin.mixins;
 
+import me.acaiberii.tbtr.storage.Resources;
 import me.acaiberii.tbtr.utility.CapeUtil;
 import me.acaiberii.tbtr.wrapper.Wrapper;
 import net.minecraft.client.Minecraft;
@@ -25,10 +26,10 @@ public abstract class MixinAbstractClientPlayer {
     @Inject(method = "getLocationCape", at = @At("HEAD"), cancellable = true)
     private void getCapeHook(CallbackInfoReturnable<ResourceLocation> cir) {
         if (me.acaiberii.tbtr.util.init.init.capeUtil.hasRegCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(new ResourceLocation("tbtr:regcape.png"));
+            cir.setReturnValue(Resources.regCape);
         }
         else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasInkCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(new ResourceLocation("tbtr:inkcape.png"));
+            cir.setReturnValue(Resources.inkineCape);
         }
     }
 }
