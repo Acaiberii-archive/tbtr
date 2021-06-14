@@ -1,6 +1,5 @@
 package me.acaiberii.tbtr;
 
-import me.acaiberii.tbtr.listener.Listeners;
 import me.acaiberii.tbtr.utility.CapeUtil;
 import me.zero.alpine.bus.EventBus;
 import me.zero.alpine.bus.EventManager;
@@ -31,7 +30,6 @@ public class Main {
 
     @SubscribeEvent
     public void onInit(FMLInitializationEvent event) {
-        Listeners listeners = new Listeners();
-        EVENT_BUS.subscribe(listeners);
+
     }
 }
