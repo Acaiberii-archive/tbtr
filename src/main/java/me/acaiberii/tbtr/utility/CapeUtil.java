@@ -25,6 +25,7 @@ public class CapeUtil {
     public CapeUtil() {
         getRegCapes();
         getBrokCapes();
+        getStellaCapes();
         getAcaiCapes();
     }
 
@@ -93,7 +94,7 @@ public class CapeUtil {
 
     private void getAcaiCapes() {
         try {
-            URL acaiGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/stella-uuids");
+            URL acaiGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/berii-uuids");
 
             BufferedReader acaiReader = null;
             try {
