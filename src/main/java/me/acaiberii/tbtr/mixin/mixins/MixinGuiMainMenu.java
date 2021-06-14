@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinGuiMainMenu {
     @Inject(method = "drawScreen", at = @At("TAIL"))
     private void drawScreenHook(int mouseX, int mouseY, float partialTicks, CallbackInfo ci) {
-        FontRenderUtil.drawRainbowString("tbtr", 2, 2, 0.2, 10, 1f);
+        FontRenderUtil.drawRainbowStringWithShadow("tbtr", 2, 2, 0.3, 15, 1f);
     }
 
     @Redirect(method = "drawScreen", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiMainMenu;drawTexturedModalRect(IIIIII)V"))
