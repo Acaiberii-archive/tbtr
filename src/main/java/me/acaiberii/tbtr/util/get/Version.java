@@ -2,6 +2,7 @@ package me.acaiberii.tbtr.util.get;
 
 import me.acaiberii.tbtr.storage.Info;
 import me.acaiberii.tbtr.storage.Versions;
+import me.acaiberii.tbtr.util.act.Actions;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,9 +25,8 @@ public class Version {
             else {
                 Info.isOutdated = false;
             }
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (Exception e) {
+            logger.error(Actions.formatError("rendering capes"));
             e.printStackTrace();
         }
     }

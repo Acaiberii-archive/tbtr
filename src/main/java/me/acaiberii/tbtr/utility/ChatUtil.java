@@ -16,4 +16,8 @@ public class ChatUtil {
     public static void printErr(String msg) {
         Minecraft.getMinecraft().player.sendMessage(new TextComponentString(ChatFormatting.BLACK + "[" + ChatFormatting.RED + "TBTR" + ChatFormatting.BLACK + "]" + ChatFormatting.RESET + " " + msg));
     }
+
+    public static void printDebug(String msg) {
+        Minecraft.getMinecraft().player.sendMessage(new TextComponentString(ChatFormatting.BLACK + "[" + ChatFormatting.DARK_GREEN + "TBTR" + ChatFormatting.BLACK + "]" + ChatFormatting.RESET + " " + msg));
+    }
 }
