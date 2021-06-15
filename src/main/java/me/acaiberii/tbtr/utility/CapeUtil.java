@@ -21,28 +21,34 @@ public class CapeUtil {
     private HashSet<UUID> brokUuids = new HashSet<>();
     private HashSet<UUID> stellaUuids = new HashSet<>();
     private HashSet<UUID> acaiUuids = new HashSet<>();
+    private HashSet<UUID> ytUuids = new HashSet<>();
+    private HashSet<UUID> pmcUuids = new HashSet<>();
+    private HashSet<UUID> twitchUuids = new HashSet<>();
 
     public CapeUtil() {
         getRegCapes();
         getBrokCapes();
         getStellaCapes();
         getAcaiCapes();
+        getYTCapes();
+        getPMCCapes();
+        getTwitchCapes();
     }
 
     private void getRegCapes() {
         try {
-            URL regGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/reg-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/reg-uuids");
 
-            BufferedReader regReader = null;
+            BufferedReader Reader = null;
             try {
-                regReader = new BufferedReader(new InputStreamReader(regGithubFile.openStream()));
+                Reader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
             String regLine;
-            while ((regLine = regReader.readLine()) != null) {
+            while ((regLine = Reader.readLine()) != null) {
                 regUuids.add(UUID.fromString(regLine));
             }
         } catch (Exception e) {
@@ -52,17 +58,17 @@ public class CapeUtil {
 
     private void getBrokCapes() {
         try {
-            URL brokGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/brok-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/brok-uuids");
 
-            BufferedReader brokReader = null;
+            BufferedReader Reader = null;
             try {
-                brokReader = new BufferedReader(new InputStreamReader(brokGithubFile.openStream()));
+                Reader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
             String brokLine;
-            while ((brokLine = brokReader.readLine()) != null) {
+            while ((brokLine = Reader.readLine()) != null) {
                 brokUuids.add(UUID.fromString(brokLine));
             }
         }
@@ -73,18 +79,18 @@ public class CapeUtil {
 
     private void getStellaCapes() {
         try {
-            URL stellaGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/stella-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/stella-uuids");
 
-            BufferedReader stellaReader = null;
+            BufferedReader Reader = null;
             try {
-                stellaReader = new BufferedReader(new InputStreamReader(stellaGithubFile.openStream()));
+                Reader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            String stellaLine;
-            while ((stellaLine = stellaReader.readLine()) != null) {
-                stellaUuids.add(UUID.fromString(stellaLine));
+            String Line;
+            while ((Line = Reader.readLine()) != null) {
+                stellaUuids.add(UUID.fromString(Line));
             }
         }
         catch (Exception e) {
@@ -94,18 +100,81 @@ public class CapeUtil {
 
     private void getAcaiCapes() {
         try {
-            URL acaiGithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/berii-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/berii-uuids");
 
             BufferedReader acaiReader = null;
             try {
-                acaiReader = new BufferedReader(new InputStreamReader(acaiGithubFile.openStream()));
+                acaiReader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            String acaiLine;
-            while ((acaiLine = acaiReader.readLine()) != null) {
-                acaiUuids.add(UUID.fromString(acaiLine));
+            String Line;
+            while ((Line = acaiReader.readLine()) != null) {
+                acaiUuids.add(UUID.fromString(Line));
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getYTCapes() {
+        try {
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/yt-uuids");
+
+            BufferedReader Reader = null;
+            try {
+                Reader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            String Line;
+            while ((Line = Reader.readLine()) != null) {
+                ytUuids.add(UUID.fromString(Line));
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getPMCCapes() {
+        try {
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/pmc-uuids");
+
+            BufferedReader Reader = null;
+            try {
+                Reader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            String Line;
+            while ((Line = Reader.readLine()) != null) {
+                pmcUuids.add(UUID.fromString(Line));
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getTwitchCapes() {
+        try {
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/twitch-uuids");
+
+            BufferedReader Reader = null;
+            try {
+                Reader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            String Line;
+            while ((Line = Reader.readLine()) != null) {
+                twitchUuids.add(UUID.fromString(Line));
             }
         }
         catch (Exception e) {
@@ -127,5 +196,17 @@ public class CapeUtil {
 
     public boolean hasAcaiCape(UUID uuid) {
         return acaiUuids.contains(uuid);
+    }
+
+    public boolean hasYTCape(UUID uuid) {
+        return ytUuids.contains(uuid);
+    }
+
+    public boolean hasPMCCape(UUID uuid) {
+        return pmcUuids.contains(uuid);
+    }
+
+    public boolean hasTwitchCape(UUID uuid) {
+        return twitchUuids.contains(uuid);
     }
 }

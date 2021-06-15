@@ -1,6 +1,7 @@
 package me.acaiberii.tbtr.mixin.mixins;
 
 import me.acaiberii.tbtr.storage.Resources;
+import me.acaiberii.tbtr.util.init.init;
 import me.acaiberii.tbtr.utility.CapeUtil;
 import me.acaiberii.tbtr.wrapper.Wrapper;
 import net.minecraft.client.Minecraft;
@@ -25,17 +26,26 @@ public abstract class MixinAbstractClientPlayer {
 
     @Inject(method = "getLocationCape", at = @At("HEAD"), cancellable = true)
     private void getCapeHook(CallbackInfoReturnable<ResourceLocation> cir) {
-        if (me.acaiberii.tbtr.util.init.init.capeUtil.hasRegCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+        if (init.capeUtil.hasRegCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
             cir.setReturnValue(Resources.regCape);
         }
-        else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasBrokCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+        else if (init.capeUtil.hasBrokCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
             cir.setReturnValue(Resources.brokCape);
         }
-        else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasStellaCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+        else if (init.capeUtil.hasStellaCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
             cir.setReturnValue(Resources.stellaCape);
         }
-        else if (me.acaiberii.tbtr.util.init.init.capeUtil.hasAcaiCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+        else if (init.capeUtil.hasAcaiCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
             cir.setReturnValue(Resources.acaiCape);
+        }
+        else if (init.capeUtil.hasYTCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+            cir.setReturnValue(Resources.ytCape);
+        }
+        else if (init.capeUtil.hasPMCCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+            cir.setReturnValue(Resources.pmcCape);
+        }
+        else if (init.capeUtil.hasTwitchCape(Objects.requireNonNull(getPlayerInfo().getGameProfile().getId()))) {
+            cir.setReturnValue(Resources.twitchCape);
         }
     }
 }
