@@ -14,4 +14,8 @@ public class ColorUtil {
         float hue = (System.currentTimeMillis() % (int) (seconds * 1000)) / (seconds * 1000);
         return Color.HSBtoRGB(hue, saturation, brightness);
     }
+
+    public static int getInteger(int red, int green, int blue) {
+        return 0x00000000 | (red << 16) | (green << 8) | blue;
+    }
 }

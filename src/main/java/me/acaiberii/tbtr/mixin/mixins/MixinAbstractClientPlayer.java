@@ -3,6 +3,7 @@ package me.acaiberii.tbtr.mixin.mixins;
 import me.acaiberii.tbtr.storage.Resources;
 import me.acaiberii.tbtr.util.init.init;
 import me.acaiberii.tbtr.utility.CapeUtil;
+import me.acaiberii.tbtr.utility.ChatUtil;
 import me.acaiberii.tbtr.wrapper.Wrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
@@ -17,6 +18,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
+import static me.acaiberii.tbtr.util.act.Actions.formatError;
+
 @Mixin(AbstractClientPlayer.class)
 public abstract class MixinAbstractClientPlayer {
 
@@ -26,26 +29,26 @@ public abstract class MixinAbstractClientPlayer {
 
     @Inject(method = "getLocationCape", at = @At("HEAD"), cancellable = true)
     private void getCapeHook(CallbackInfoReturnable<ResourceLocation> cir) {
-        if (init.capeUtil.hasRegCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(Resources.regCape);
+        try {
+            if (init.capeUtil.hasRegCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+                cir.setReturnValue(Resources.regCape);
+            } else if (init.capeUtil.hasBrokCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+                cir.setReturnValue(Resources.brokCape);
+            } else if (init.capeUtil.hasStellaCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+                cir.setReturnValue(Resources.stellaCape);
+            } else if (init.capeUtil.hasAcaiCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+                cir.setReturnValue(Resources.acaiCape);
+            } else if (init.capeUtil.hasYTCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+                cir.setReturnValue(Resources.ytCape);
+            } else if (init.capeUtil.hasPMCCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
+                cir.setReturnValue(Resources.pmcCape);
+            } else if (init.capeUtil.hasTwitchCape(Objects.requireNonNull(getPlayerInfo().getGameProfile().getId()))) {
+                cir.setReturnValue(Resources.twitchCape);
+            }
         }
-        else if (init.capeUtil.hasBrokCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(Resources.brokCape);
-        }
-        else if (init.capeUtil.hasStellaCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(Resources.stellaCape);
-        }
-        else if (init.capeUtil.hasAcaiCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(Resources.acaiCape);
-        }
-        else if (init.capeUtil.hasYTCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(Resources.ytCape);
-        }
-        else if (init.capeUtil.hasPMCCape(Objects.requireNonNull(getPlayerInfo()).getGameProfile().getId())) {
-            cir.setReturnValue(Resources.pmcCape);
-        }
-        else if (init.capeUtil.hasTwitchCape(Objects.requireNonNull(getPlayerInfo().getGameProfile().getId()))) {
-            cir.setReturnValue(Resources.twitchCape);
+        catch (Exception e) {
+            ChatUtil.printErr(formatError("rendering capes"));
+            e.printStackTrace();
         }
     }
 }

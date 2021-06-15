@@ -12,6 +12,8 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.UUID;
 
+import static me.acaiberii.tbtr.util.act.Actions.formatError;
+
 /*
 This is from Gav06's GavHack, taken from Gamesense. :)
 */
@@ -26,13 +28,19 @@ public class CapeUtil {
     private HashSet<UUID> twitchUuids = new HashSet<>();
 
     public CapeUtil() {
-        getRegCapes();
-        getBrokCapes();
-        getStellaCapes();
-        getAcaiCapes();
-        getYTCapes();
-        getPMCCapes();
-        getTwitchCapes();
+        try {
+            getRegCapes();
+            getBrokCapes();
+            getStellaCapes();
+            getAcaiCapes();
+            getYTCapes();
+            getPMCCapes();
+            getTwitchCapes();
+        }
+        catch (Exception e) {
+            ChatUtil.printErr(formatError("loading capes"));
+            e.printStackTrace();
+        }
     }
 
     private void getRegCapes() {
