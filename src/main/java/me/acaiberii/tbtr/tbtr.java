@@ -1,15 +1,29 @@
 package me.acaiberii.tbtr;
 
+import me.acaiberii.tbtr.storage.Info;
+import me.acaiberii.tbtr.storage.Versions;
+import me.acaiberii.tbtr.utility.CapeUtil;
 import me.zero.alpine.bus.EventBus;
 import me.zero.alpine.bus.EventManager;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.UUID;
+import org.apache.logging.log4j.*;
+
+import static org.apache.logging.log4j.LogManager.getLogger;
 
 @Mod(name = "TBTR", modid = "tbtr", version = "0.0.1")
 public class tbtr {
-    public static final EventBus EVENT_BUS = new EventManager();
+    public static CapeUtil capeUtil = new CapeUtil();
+    public static Logger logger = LogManager.getLogger("tbtr");
 
     @Mod.Instance
     public static tbtr instance;
@@ -24,7 +38,7 @@ public class tbtr {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
-
+        me.acaiberii.tbtr.util.get.Version.getVersion();
     }
 
     @Mod.EventHandler

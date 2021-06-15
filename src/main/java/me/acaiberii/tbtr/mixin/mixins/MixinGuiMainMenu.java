@@ -1,5 +1,6 @@
 package me.acaiberii.tbtr.mixin.mixins;
 
+import me.acaiberii.tbtr.storage.Info;
 import me.acaiberii.tbtr.utility.ColorUtil;
 import me.acaiberii.tbtr.utility.FontRenderUtil;
 import net.minecraft.client.Minecraft;
@@ -17,6 +18,8 @@ public class MixinGuiMainMenu {
     @Inject(method = "drawScreen", at = @At("TAIL"))
     private void drawScreenHook(int mouseX, int mouseY, float partialTicks, CallbackInfo ci) {
         FontRenderUtil.drawRainbowStringWithShadow("tbtr", 2, 2, 0.3, 10, 1f);
-        FontRenderUtil.drawString("Made with <3 by AcaiBerii", 2, FontRenderUtil.getFontHeight() + 2, ColorUtil.getInteger(100, 100, 100));
+        if (Info.isOutdated) {
+            FontRenderUtil.drawStringWithShadow("Outdated version!", 2, FontRenderUtil.getFontHeight() + 2, ColorUtil.getInteger(255, 0, 0));
+        }
     }
 }

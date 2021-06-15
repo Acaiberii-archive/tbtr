@@ -1,7 +1,6 @@
 package me.acaiberii.tbtr.utility;
 
 import org.json.simple.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,8 +10,8 @@ import java.net.URL;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.UUID;
-
 import static me.acaiberii.tbtr.util.act.Actions.formatError;
+import static me.acaiberii.tbtr.tbtr.logger;
 
 /*
 This is from Gav06's GavHack, taken from Gamesense. :)
@@ -38,14 +37,14 @@ public class CapeUtil {
             getTwitchCapes();
         }
         catch (Exception e) {
-            ChatUtil.printErr(formatError("loading capes"));
+            logger.error(formatError("loading capes"));
             e.printStackTrace();
         }
     }
 
     private void getRegCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/reg-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/reg-uuids");
 
             BufferedReader Reader = null;
             try {
@@ -66,7 +65,7 @@ public class CapeUtil {
 
     private void getBrokCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/brok-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/brok-uuids");
 
             BufferedReader Reader = null;
             try {
@@ -87,7 +86,7 @@ public class CapeUtil {
 
     private void getStellaCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/stella-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/stella-uuids");
 
             BufferedReader Reader = null;
             try {
@@ -108,7 +107,7 @@ public class CapeUtil {
 
     private void getAcaiCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/berii-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/berii-uuids");
 
             BufferedReader acaiReader = null;
             try {
@@ -129,7 +128,7 @@ public class CapeUtil {
 
     private void getYTCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/yt-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/yt-uuids");
 
             BufferedReader Reader = null;
             try {
@@ -150,7 +149,7 @@ public class CapeUtil {
 
     private void getPMCCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/pmc-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/pmc-uuids");
 
             BufferedReader Reader = null;
             try {
@@ -171,7 +170,7 @@ public class CapeUtil {
 
     private void getTwitchCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-capes/main/twitch-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/twitch-uuids");
 
             BufferedReader Reader = null;
             try {
