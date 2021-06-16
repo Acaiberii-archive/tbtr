@@ -33,17 +33,7 @@ public class tbtr {
     }
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event) throws NetNotReachableException {
-        logger.info("Testing if network is reachable...");
-        try {
-            InetAddress testAddy = InetAddress.getByName("acaiberii.is-a.dev");
-            if (!testAddy.isReachable(10000)) {
-                throw new NetNotReachableException("Network unreachable.");
-            }
-        }
-        catch (Exception e) {
-            throw new NetNotReachableException("Network unreachable.", e.getCause());
-        }
+    public void preInit(FMLPreInitializationEvent event) {
     }
 
     @Mod.EventHandler
