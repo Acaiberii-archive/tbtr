@@ -1,13 +1,11 @@
-package me.acaiberii.tbtr.util.get;
+package me.acaiberii.tbtr.utility.get;
 
 import me.acaiberii.tbtr.storage.Info;
 import me.acaiberii.tbtr.storage.Versions;
-import me.acaiberii.tbtr.util.act.Actions;
+import me.acaiberii.tbtr.utility.act.Actions;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import static me.acaiberii.tbtr.tbtr.logger;
 

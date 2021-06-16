@@ -1,11 +1,7 @@
 package me.acaiberii.tbtr.mixin.mixins;
 
 import me.acaiberii.tbtr.storage.Resources;
-import me.acaiberii.tbtr.util.act.Actions;
-import me.acaiberii.tbtr.utility.CapeUtil;
-import me.acaiberii.tbtr.utility.ChatUtil;
-import me.acaiberii.tbtr.wrapper.Wrapper;
-import net.minecraft.client.Minecraft;
+import me.acaiberii.tbtr.utility.act.Actions;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.util.ResourceLocation;
@@ -17,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import javax.annotation.Nullable;
 import java.util.Objects;
 import static me.acaiberii.tbtr.tbtr.capeUtil;
-import static me.acaiberii.tbtr.util.act.Actions.formatError;
 import static me.acaiberii.tbtr.tbtr.logger;
 
 @Mixin(AbstractClientPlayer.class)

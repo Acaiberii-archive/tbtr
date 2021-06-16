@@ -1,9 +1,8 @@
-package me.acaiberii.tbtr.util.pos;
+package me.acaiberii.tbtr.utility.pos;
 
-import me.acaiberii.tbtr.wrapper.Wrapper;
 import net.minecraft.entity.Entity;
 
-import static me.acaiberii.tbtr.util.player.GetPos.*;
+import static me.acaiberii.tbtr.utility.player.GetPos.*;
 
 public class GetFar {
     public static boolean isFarX(Entity entity, double pos) {

@@ -1,4 +1,4 @@
-package me.acaiberii.tbtr.util.player;
+package me.acaiberii.tbtr.utility.player;
 
 import me.acaiberii.tbtr.wrapper.Wrapper;
 

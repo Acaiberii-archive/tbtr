@@ -1,4 +1,4 @@
-package me.acaiberii.tbtr.util.pos;
+package me.acaiberii.tbtr.utility.pos;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -29,5 +29,10 @@ public class GetCollision {
         else {
             return false;
         }
+    }
+
+    public static boolean getIsCollidingXYZ(Entity entity) {
+        if (getIsCollidingX(entity) && getIsCollidingY(entity) && getIsCollidingZ(entity)) return true;
+        else return false;
     }
 }

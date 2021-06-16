@@ -1,4 +1,4 @@
-package me.acaiberii.tbtr.util.act;
+package me.acaiberii.tbtr.utility.act;
 
 public class Actions {
     public static String formatError(String action) {

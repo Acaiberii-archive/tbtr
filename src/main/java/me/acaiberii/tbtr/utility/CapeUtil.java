@@ -1,16 +1,12 @@
 package me.acaiberii.tbtr.utility;
 
-import org.json.simple.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.UUID;
-import static me.acaiberii.tbtr.util.act.Actions.formatError;
+import static me.acaiberii.tbtr.utility.act.Actions.formatError;
 import static me.acaiberii.tbtr.tbtr.logger;
 
 /*
