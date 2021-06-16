@@ -12,7 +12,6 @@ import static me.acaiberii.tbtr.tbtr.logger;
 public class Version {
     public static void getVersion() {
         try {
-            logger.info("Getting version.");
             URL url = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/latest");
             BufferedReader bfr = new BufferedReader(new InputStreamReader(url.openStream()));
             String Line;
@@ -26,7 +25,7 @@ public class Version {
                 Versions.latestVersion = Line;
             }
         } catch (Exception e) {
-            logger.error(Actions.formatError("rendering capes"));
+            logger.error(Actions.formatError("getting version"));
             e.printStackTrace();
         }
     }
