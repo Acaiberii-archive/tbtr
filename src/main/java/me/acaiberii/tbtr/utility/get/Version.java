@@ -23,6 +23,7 @@ public class Version {
             }
             else {
                 Info.isOutdated = false;
+                Versions.latestVersion = Line;
             }
         } catch (Exception e) {
             logger.error(Actions.formatError("rendering capes"));
