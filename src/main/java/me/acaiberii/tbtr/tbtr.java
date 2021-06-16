@@ -1,6 +1,9 @@
 package me.acaiberii.tbtr;
 
 import me.acaiberii.tbtr.utility.CapeUtil;
+import me.zero.alpine.bus.EventBus;
+import me.zero.alpine.bus.EventManager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -13,6 +16,7 @@ import static org.apache.logging.log4j.LogManager.getLogger;
 public class tbtr {
     public static CapeUtil capeUtil = new CapeUtil();
     public static Logger logger = LogManager.getLogger("tbtr");
+    public static EventBus EVENT_BUS = new EventManager();
 
     @Mod.Instance
     public static tbtr instance;
@@ -32,7 +36,8 @@ public class tbtr {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-
+        logger.info("Registering events...");
+        me.acaiberii.tbtr.event.EventManager eventManager = new me.acaiberii.tbtr.event.EventManager();
     }
 
     @Mod.EventHandler
