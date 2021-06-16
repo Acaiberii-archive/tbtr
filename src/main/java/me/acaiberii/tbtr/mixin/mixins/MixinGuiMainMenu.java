@@ -1,6 +1,7 @@
 package me.acaiberii.tbtr.mixin.mixins;
 
 import me.acaiberii.tbtr.storage.Info;
+import me.acaiberii.tbtr.storage.Versions;
 import me.acaiberii.tbtr.utility.ColorUtil;
 import me.acaiberii.tbtr.utility.FontRenderUtil;
 import net.minecraft.client.Minecraft;
@@ -20,6 +21,11 @@ public class MixinGuiMainMenu {
         FontRenderUtil.drawRainbowStringWithShadow("tbtr", 2, 2, 0.3, 10, 1f);
         if (Info.isOutdated) {
             FontRenderUtil.drawStringWithShadow("Outdated version!", 2, FontRenderUtil.getFontHeight() + 2, ColorUtil.getInteger(255, 0, 0));
+            FontRenderUtil.drawStringWithShadow("Latest version: " + Versions.latestVersion, 2, FontRenderUtil.getFontHeight() * 2 + 2, ColorUtil.getInteger(155, 0, 0));
+        }
+        else if (!Info.isOutdated) {
+            FontRenderUtil.drawStringWithShadow("Latest version!", 2, FontRenderUtil.getFontHeight() + 2, ColorUtil.getInteger(0, 255, 0));
+            FontRenderUtil.drawStringWithShadow("Latest version: " + Versions.latestVersion, 2, FontRenderUtil.getFontHeight() * 2 + 2, ColorUtil.getInteger(0, 155, 0));
         }
     }
 }

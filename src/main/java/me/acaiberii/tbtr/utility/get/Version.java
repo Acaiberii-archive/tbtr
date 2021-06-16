@@ -19,6 +19,7 @@ public class Version {
             Line = bfr.readLine();
             if (!Versions.version.equals(Line)) {
                 Info.isOutdated = true;
+                Versions.latestVersion = Line;
             }
             else {
                 Info.isOutdated = false;
