@@ -166,7 +166,7 @@ public class CapeUtil {
 
     private void getTwitchCapes() {
         try {
-            URL GithubFile = new URL("https://raw.githubusercontent.com`/AcaiBerii/tbtr-resources/main/twitch-uuids");
+            URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/twitch-uuids");
 
             BufferedReader Reader = null;
             try {
