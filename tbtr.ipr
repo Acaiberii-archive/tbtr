@@ -32,6 +32,7 @@
         </option>
       </GradleProjectSettings>
     </option>
+    <option name="offlineMode" value="true" />
   </component>
   <component name="GradleUISettings">
     <setting name="root" />

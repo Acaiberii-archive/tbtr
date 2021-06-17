@@ -105,15 +105,15 @@ public class CapeUtil {
         try {
             URL GithubFile = new URL("https://raw.githubusercontent.com/AcaiBerii/tbtr-resources/main/berii-uuids");
 
-            BufferedReader acaiReader = null;
+            BufferedReader Reader = null;
             try {
-                acaiReader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
+                Reader = new BufferedReader(new InputStreamReader(GithubFile.openStream()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
             String Line;
-            while ((Line = acaiReader.readLine()) != null) {
+            while ((Line = Reader.readLine()) != null) {
                 acaiUuids.add(UUID.fromString(Line));
             }
         }
