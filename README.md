@@ -6,5 +6,5 @@
 [![Github forks](https://img.shields.io/github/forks/AcaiBerii/tbtr?style=plastic&label=Forks)]()
 [![Codefactor quality](https://www.codefactor.io/repository/github/AcaiBerii/tbtr/badge?style=plastic)]()
 #### test server:
-```beriianarchy.aternos.me:38473```
+```beriianarchy.aternos.me:38473```  
 idc that its aternos
